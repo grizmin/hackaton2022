@@ -22,8 +22,3 @@ POLICY
   name                 = "DangerousLambdaRole"
   path                 = "/"
 }
-
-# resource "aws_iam_role_policy_attachment" "DangerousLambdaRole_AdministratorAccess" {
-#   policy_arn = "arn:aws:iam::aws:policy/AdministratorAccess"
-#   role       = "DangerousLambdaRole"
-# }
