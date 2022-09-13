@@ -20,7 +20,7 @@ AWS_DEFAULT_PROFILE='kk-hackaton' terraform apply
 
 ```
 
-* in case you want to apply only single/multiple resources, use the following
+* in case you want to cherry pick resources, use the following
 
 ```
 AWS_DEFAULT_PROFILE='kk-hackaton' terraform apply -target aws_iam_role.DangerousLambdaRole -target aws_iam_role.DangerousInstanceProfileRole
