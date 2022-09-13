@@ -21,7 +21,7 @@ resource "aws_instance" "DangerousEC2Instance" {
 
   get_password_data                    = "false"
   hibernation                          = "false"
-  iam_instance_profile                 = "DangerousInstanceProfileRole"
+  iam_instance_profile                 = aws_iam_instance_profile.DangerousInstanceProfileRole.name
   instance_initiated_shutdown_behavior = "stop"
   instance_type                        = "t2.micro"
   ipv6_address_count                   = "0"
@@ -51,7 +51,7 @@ resource "aws_instance" "DangerousEC2Instance" {
     volume_type           = "gp2"
   }
 
-  security_groups   = ["DangerousEC2InstanceSG"]
+  security_groups   = ["${aws_security_group.sg_DangerousEC2Instance.name}"]
   source_dest_check = "true"
 
 

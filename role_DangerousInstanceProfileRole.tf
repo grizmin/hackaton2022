@@ -24,6 +24,6 @@ POLICY
 }
 
 resource "aws_iam_instance_profile" "DangerousInstanceProfileRole" {
-  name = "DangerousInstanceProfileRole"
+  name = aws_iam_role.DangerousInstanceProfileRole.name
   role = aws_iam_role.DangerousInstanceProfileRole.name
 }
